@@ -70,10 +70,16 @@ public class DeckOfCards {
 		toDisplay(cardsDeck);
 	}
 
-	public static void main(String[] args) {
-		DeckOfCards o = new DeckOfCards();
-		o.initializingCards();
-		o.noOfPlayers();
-
+	public static void cardDistribution(ArrayList<String> cardsDeck, int player) {
+		// This loop will itterate for no of players
+		for (int i = 0; i < player; i++) {
+			System.out.print("\nPlayer " + (i + 1) + " got cards:\n");
+			// This loop will itterate for no of cards for each player
+			for (int j = 0; j < 9; j++) {
+				System.out.print("\t" + cardsDeck.get(i + j * player));
+			}
+		}
+		System.out.println();
 	}
+
 }
