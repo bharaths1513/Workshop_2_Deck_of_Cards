@@ -33,7 +33,7 @@ public class DeckOfCards {
 		System.out.println();
 	}
 
-// UC2 no of players to play min players 2 and max players 4 
+	// UC2 no of players to play min players 2 and max players 4
 	public void noOfPlayers() {
 		System.out.print("\nEnter number of players minimum 2 , maximum 4 : ");
 		int player = scanner.nextInt();
@@ -54,6 +54,20 @@ public class DeckOfCards {
 			System.out.println("\nPlayer " + i + " Getting card.............");
 
 		}
+	}
+
+	// UC 4 Shuffling the cards by using Math.random
+
+	public static void toshuffle(ArrayList<String> cardsDeck) {
+		System.out.println("shuffling the cards before Distribution");
+		ArrayList<String> temp = new ArrayList<String>();
+		while (!cardsDeck.isEmpty()) {
+			int loc = (int) (Math.random() * cardsDeck.size());
+			temp.add(cardsDeck.get(loc));
+			cardsDeck.remove(loc);
+		}
+		cardsDeck = temp;
+		toDisplay(cardsDeck);
 	}
 
 	public static void main(String[] args) {
