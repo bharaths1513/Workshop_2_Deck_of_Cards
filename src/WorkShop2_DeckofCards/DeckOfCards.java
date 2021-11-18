@@ -70,7 +70,7 @@ public class DeckOfCards {
 		toDisplay(cardsDeck);
 	}
 
-	UC 5 Card Distribution
+	// UC 5 Card Distribution
 	public static void cardDistribution(ArrayList<String> cardsDeck, int player) {
 		// This loop will itterate for no of players
 		for (int i = 0; i < player; i++) {
